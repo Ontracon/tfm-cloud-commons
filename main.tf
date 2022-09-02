@@ -71,6 +71,7 @@ resource "random_string" "customer_prefix" {
   special = false
 }
 resource "time_rotating" "password" {
+  count         = var.password_create ? 1 : 0
   rotation_days = var.password_rotation
   lifecycle {
     create_before_destroy = true
@@ -78,6 +79,7 @@ resource "time_rotating" "password" {
 }
 
 resource "random_string" "password" {
+  count = var.password_create ? 1 : 0
   keepers = {
     env             = var.global_config.env,
     location_code   = local.data.location_codes[var.cloud_region].code,
@@ -85,7 +87,7 @@ resource "random_string" "password" {
     project         = var.global_config.project,
     application     = var.global_config.application,
     custom_name     = var.custom_name
-    time            = resource.time_rotating.password.id
+    time            = resource.time_rotating.password[0].id
   }
   length      = var.password_length
   lower       = true

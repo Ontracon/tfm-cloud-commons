@@ -1,7 +1,8 @@
 module "common" {
-  source        = "../.."
-  cloud_region  = "eu-central-1"
-  global_config = var.global_config
+  source          = "../.."
+  cloud_region    = var.cloud_region
+  global_config   = var.global_config
+  password_create = true
 }
 
 # All generated Output
@@ -27,4 +28,3 @@ output "random_password_next_rotation" {
   description = "A random password with autorotation & keepers based on Inputs."
   sensitive   = false
 }
-

@@ -19,12 +19,12 @@ output "tags" {
 }
 
 output "random_password" {
-  value       = resource.random_string.password.result
+  value       = var.password_create ? resource.random_string.password[0].result : ""
   sensitive   = true
   description = "A generated random password with keepers based on the input variables global_config & custom_name."
 }
 
 output "random_password_next_rotation" {
-  value       = resource.time_rotating.password.rotation_rfc3339
+  value       = var.password_create ? resource.time_rotating.password[0].rotation_rfc3339 : ""
   description = "Password next rotation in rfc3339 UTC Time."
 }

@@ -52,21 +52,20 @@ See the [30-complex example](examples/30-complex) for customizing data & names f
 # Module Documentation
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 1.0   |
-| <a name="requirement_random"></a> [random](#requirement_random)          | >= 3.3.2 |
-| <a name="requirement_time"></a> [time](#requirement_time)                | 0.8.0    |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.3.2 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | 0.8.0 |
 
 ## Providers
 
-| Name                                                      | Version |
-| --------------------------------------------------------- | ------- |
-| <a name="provider_random"></a> [random](#provider_random) | 3.4.1   |
-| <a name="provider_time"></a> [time](#provider_time)       | 0.8.0   |
+| Name | Version |
+|------|---------|
+| <a name="provider_random"></a> [random](#provider\_random) | 3.4.1 |
+| <a name="provider_time"></a> [time](#provider\_time) | 0.8.0 |
 
 ## Modules
 
@@ -74,38 +73,37 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                   | Type     |
-| ---------------------------------------------------------------------------------------------------------------------- | -------- |
+| Name | Type |
+|------|------|
 | [random_string.customer_prefix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
-| [random_string.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)        | resource |
-| [random_string.random](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)          | resource |
-| [time_rotating.password](https://registry.terraform.io/providers/hashicorp/time/0.8.0/docs/resources/rotating)         | resource |
+| [random_string.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [random_string.random](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
+| [time_rotating.password](https://registry.terraform.io/providers/hashicorp/time/0.8.0/docs/resources/rotating) | resource |
 
 ## Inputs
 
-| Name                                                                                          | Description                                                                       | Type                                                                                                                                                                                        | Default | Required |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | :------: |
-| <a name="input_cloud_region"></a> [cloud_region](#input_cloud_region)                         | Define the cloud region to use (AWS Region / Azure Location) which tf should use. | `string`                                                                                                                                                                                    | n/a     |    yes   |
-| <a name="input_commons_file_json"></a> [commons_file_json](#input_commons_file_json)          | Json file to override the commons fixed variables.                                | `string`                                                                                                                                                                                    | `""`    |    no    |
-| <a name="input_custom_name"></a> [custom_name](#input_custom_name)                            | Set custom name for deployment.                                                   | `string`                                                                                                                                                                                    | `""`    |    no    |
-| <a name="input_custom_tags"></a> [custom_tags](#input_custom_tags)                            | Set custom tags for deployment.                                                   | `map(string)`                                                                                                                                                                               | `null`  |    no    |
-| <a name="input_global_config"></a> [global_config](#input_global_config)                      | Global config Object which contains the mandatory informations within OTC.        | <pre>object({<br>    env             = string<br>    customer_prefix = string<br>    project         = string<br>    application     = string<br>    costcenter      = string<br>  })</pre> | n/a     |    yes   |
-| <a name="input_local_file_json_tpl"></a> [local_file_json_tpl](#input_local_file_json_tpl)    | Json template file to override the local settings template.                       | `string`                                                                                                                                                                                    | `""`    |    no    |
-| <a name="input_module"></a> [module](#input_module)                                           | Module name & version for tagging.                                                | `string`                                                                                                                                                                                    | `""`    |    no    |
-| <a name="input_naming_file_json_tpl"></a> [naming_file_json_tpl](#input_naming_file_json_tpl) | Json template file to override the naming template.                               | `string`                                                                                                                                                                                    | `""`    |    no    |
-| <a name="input_password_create"></a> [password_create](#input_password_create)                | Should a random password be created.                                              | `bool`                                                                                                                                                                                      | `false` |    no    |
-| <a name="input_password_length"></a> [password_length](#input_password_length)                | Random Password length.                                                           | `number`                                                                                                                                                                                    | `30`    |    no    |
-| <a name="input_password_rotation"></a> [password_rotation](#input_password_rotation)          | Automatic password rotation in days on next terraform apply.                      | `number`                                                                                                                                                                                    | `1`     |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cloud_region"></a> [cloud\_region](#input\_cloud\_region) | Define the cloud region to use (AWS Region / Azure Location) which tf should use. | `string` | n/a | yes |
+| <a name="input_commons_file_json"></a> [commons\_file\_json](#input\_commons\_file\_json) | Json file to override the commons fixed variables. | `string` | `""` | no |
+| <a name="input_custom_name"></a> [custom\_name](#input\_custom\_name) | Set custom name for deployment. | `string` | `""` | no |
+| <a name="input_custom_tags"></a> [custom\_tags](#input\_custom\_tags) | Set custom tags for deployment. | `map(string)` | `null` | no |
+| <a name="input_global_config"></a> [global\_config](#input\_global\_config) | Global config Object which contains the mandatory informations within OTC. | <pre>object({<br>    env             = string<br>    customer_prefix = string<br>    project         = string<br>    application     = string<br>    costcenter      = string<br>  })</pre> | n/a | yes |
+| <a name="input_local_file_json_tpl"></a> [local\_file\_json\_tpl](#input\_local\_file\_json\_tpl) | Json template file to override the local settings template. | `string` | `""` | no |
+| <a name="input_module"></a> [module](#input\_module) | Module name & version for tagging. | `string` | `""` | no |
+| <a name="input_naming_file_json_tpl"></a> [naming\_file\_json\_tpl](#input\_naming\_file\_json\_tpl) | Json template file to override the naming template. | `string` | `""` | no |
+| <a name="input_password_create"></a> [password\_create](#input\_password\_create) | Should a random password be created. | `bool` | `false` | no |
+| <a name="input_password_length"></a> [password\_length](#input\_password\_length) | Random Password length. | `number` | `30` | no |
+| <a name="input_password_rotation"></a> [password\_rotation](#input\_password\_rotation) | Automatic password rotation in days on next terraform apply. | `number` | `1` | no |
 
 ## Outputs
 
-| Name                                                                                                                       | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| <a name="output_data"></a> [data](#output_data)                                                                            | A Map of common data based on the input variables which can be referred from hcl.                  |
-| <a name="output_locals"></a> [locals](#output_locals)                                                                      | A Map of useful locals based on the input variables which can be referred from hcl.                |
-| <a name="output_names"></a> [names](#output_names)                                                                         | A Map of cloud resource names based on the input variables which can be referred from hcl.         |
-| <a name="output_random_password"></a> [random_password](#output_random_password)                                           | A generated random password with keepers based on the input variables global_config & custom_name. |
-| <a name="output_random_password_next_rotation"></a> [random_password_next_rotation](#output_random_password_next_rotation) | Password next rotation in rfc3339 UTC Time.                                                        |
-| <a name="output_tags"></a> [tags](#output_tags)                                                                            | A Map of tags based on the input variables which can be referred from hcl.                         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_data"></a> [data](#output\_data) | A Map of common data based on the input variables which can be referred from hcl. |
+| <a name="output_locals"></a> [locals](#output\_locals) | A Map of useful locals based on the input variables which can be referred from hcl. |
+| <a name="output_names"></a> [names](#output\_names) | A Map of cloud resource names based on the input variables which can be referred from hcl. |
+| <a name="output_random_password"></a> [random\_password](#output\_random\_password) | A generated random password with keepers based on the input variables global\_config & custom\_name. |
+| <a name="output_random_password_next_rotation"></a> [random\_password\_next\_rotation](#output\_random\_password\_next\_rotation) | Password next rotation in rfc3339 UTC Time. |
+| <a name="output_tags"></a> [tags](#output\_tags) | A Map of tags based on the input variables which can be referred from hcl. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
