@@ -15,7 +15,10 @@ output "locals" {
   value       = module.common.locals
   description = "A map which provides local variables computed by the given input variables."
 }
-
+output "names" {
+  value       = module.common.names
+  description = "A map which provides local variables computed by the given input variables."
+}
 # Just for demonstration, do not use in production as output stored unencrypted in state file.
 output "random_password" {
   value       = module.common.random_password
