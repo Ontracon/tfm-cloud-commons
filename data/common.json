@@ -1,0 +1,235 @@
+{
+  "location_codes": {
+    "description": "Location Codes for Naming of ressources based on the cloud region (AWS) / cloud location (Azure).",
+    "eastus": {
+      "code": "eus1"
+    },
+    "eastus2": {
+      "code": "eus2"
+    },
+    "southcentralus": {
+      "code": "sus1"
+    },
+    "westus2": {
+      "code": "wus2"
+    },
+    "westus3": {
+      "code": "wus3"
+    },
+    "australiaeast": {
+      "code": "eaau"
+    },
+    "southeastasia": {
+      "code": "seas"
+    },
+    "northeurope": {
+      "code": "neur"
+    },
+    "swedencentral": {
+      "code": "cese"
+    },
+    "uksouth": {
+      "code": "souk"
+    },
+    "westeurope": {
+      "code": "weur"
+    },
+    "centralus": {
+      "code": "ceus"
+    },
+    "northcentralus": {
+      "code": "ceus"
+    },
+    "westus": {
+      "code": "wus1"
+    },
+    "southafricanorth": {
+      "code": "soza"
+    },
+    "centralindia": {
+      "code": "cind"
+    },
+    "eastasia": {
+      "code": "eaas"
+    },
+    "japaneast": {
+      "code": "jpea"
+    },
+    "jioindiawest": {
+      "code": "inwe"
+    },
+    "koreacentral": {
+      "code": "koce"
+    },
+    "canadacentral": {
+      "code": "cace"
+    },
+    "francecentral": {
+      "code": "frce"
+    },
+    "germanywestcentral": {
+      "code": "gwce"
+    },
+    "norwayeast": {
+      "code": "nwea"
+    },
+    "switzerlandnorth": {
+      "code": "chno"
+    },
+    "uaenorth": {
+      "code": "uane"
+    },
+    "us-east-2": {
+      "code": "use2"
+    },
+    "us-east-1": {
+      "code": "use1"
+    },
+    "us-west-1": {
+      "code": "usw1"
+    },
+    "us-west-2": {
+      "code": "usw2"
+    },
+    "af-south-1": {
+      "code": "afs1"
+    },
+    "ap-east-1": {
+      "code": "ape1"
+    },
+    "ap-south-1": {
+      "code": "aps1"
+    },
+    "ap-northeast-3": {
+      "code": "apn3"
+    },
+    "ap-northeast-2": {
+      "code": "apn2"
+    },
+    "ap-southeast-1": {
+      "code": "aps1"
+    },
+    "ap-southeast-2": {
+      "code": "aps2"
+    },
+    "ap-northeast-1": {
+      "code": "apn1"
+    },
+    "ca-central-1": {
+      "code": "cac1"
+    },
+    "eu-central-1": {
+      "code": "euc1"
+    },
+    "eu-west-1": {
+      "code": "euw1"
+    },
+    "eu-west-2": {
+      "code": "euw2"
+    },
+    "eu-south-1": {
+      "code": "eus1"
+    },
+    "eu-west-3": {
+      "code": "euw3"
+    },
+    "eu-north-1": {
+      "code": "eun1"
+    },
+    "me-south-1": {
+      "code": "mes1"
+    },
+    "sa-east-1": {
+      "code": "sae1"
+    }
+  },
+  "services": {
+    "description": "List of known Services with ports and protocols.",
+    "ssh": {
+      "port": "22",
+      "protocol": "tcp"
+    },
+    "http": {
+      "port": "80",
+      "protocol": "tcp"
+    },
+    "https": {
+      "port": "443",
+      "protocol": "tcp"
+    },
+    "http-8080": {
+      "port": "8080",
+      "protocol": "tcp"
+    },
+    "https-8443": {
+      "port": "8443",
+      "protocol": "tcp"
+    },
+    "smtp": {
+      "port": "25",
+      "protocol": "tcp"
+    },
+    "dns": {
+      "port": "53",
+      "protocol": "tcp"
+    },
+    "pop3": {
+      "port": "110",
+      "protocol": "tcp"
+    },
+    "imap": {
+      "port": "143",
+      "protocol": "tcp"
+    },
+    "snmp": {
+      "port": "161",
+      "protocol": "udp"
+    },
+    "ms-sql": {
+      "port": "1443",
+      "protocol": "tcp"
+    },
+    "ica": {
+      "port": "1494",
+      "protocol": "tcp"
+    },
+    "nfs": {
+      "port": "2049",
+      "protocol": "tcp"
+    },
+    "ora-db": {
+      "port": "1521",
+      "protocol": "tcp"
+    },
+    "mysql-db": {
+      "port": "3306",
+      "protocol": "tcp"
+    },
+    "psql-db": {
+      "port": "5432",
+      "protocol": "tcp"
+    },
+    "cassandra-db": {
+      "port": "9042",
+      "protocol": "tcp"
+    },
+    "mongo-db": {
+      "port": "27017",
+      "protocol": "tcp"
+    },
+    "kafka": {
+      "port": "9092",
+      "protocol": "tcp"
+    }
+  },
+  "networks": {
+    "description": "List of known Networks",
+    "all-networks": {
+      "description": "All networks (including public internet). Use this parameter carefully!",
+      "ip4_cidrs": [
+        "0.0.0.0/0"
+      ],
+      "ip6_cidrs": []
+    }
+  }
+}
