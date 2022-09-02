@@ -94,6 +94,12 @@ variable "naming_file_json_tpl" {
 # ---------------------------------------------------------------------------------------------------------------------
 # Variables for Random password & rotation
 # ---------------------------------------------------------------------------------------------------------------------
+variable "password_create" {
+  type        = bool
+  default     = false
+  description = "Should a random password be created."
+}
+
 variable "password_length" {
   type        = number
   default     = 30

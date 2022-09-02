@@ -4,7 +4,7 @@ Module for define central common variables and naming of ressources which are us
 
 ## Usage
 
-The commons has defined map outputs which can be used within the modules to reference data from the commons module like services, BMW Networks and Resource Names.
+The commons has defined map outputs which can be used within the modules to reference data from the commons module like services, Networks and Resource Names.
 
 The minimum for invoking the module should be all mandatory variables:
 
@@ -36,7 +36,7 @@ module "common" {
 Which gives you the following Output:
 
 -   data: A map of common data which can be referred in hcl as `module.common.data.services["http"].port` = 80
--   names: A map of names based on the terraform resource type which can be referred as `module.common.names.resource_type["azurerm_key_vault"].name` = cnaa-dev-comm-qejmlh-kv
+-   names: A map of names based on the terraform resource type which can be referred as `module.common.names.resource_type["azurerm_key_vault"].name` = otc-dev-demo-qejmlh-kv
 -   tags: A map of tags computed by the module.
 -   random_password: A random password which will not change based on the provided global input variables & the custom name. It has Autorotation activated (default 1 day) which will change the password on the next apply when "random_password_next_rotation" UTC time is reached.
 
@@ -94,6 +94,7 @@ No modules.
 | <a name="input_local_file_json_tpl"></a> [local\_file\_json\_tpl](#input\_local\_file\_json\_tpl) | Json template file to override the local settings template. | `string` | `""` | no |
 | <a name="input_module"></a> [module](#input\_module) | Module name & version for tagging. | `string` | `""` | no |
 | <a name="input_naming_file_json_tpl"></a> [naming\_file\_json\_tpl](#input\_naming\_file\_json\_tpl) | Json template file to override the naming template. | `string` | `""` | no |
+| <a name="input_password_create"></a> [password\_create](#input\_password\_create) | Should a random password be created. | `bool` | `false` | no |
 | <a name="input_password_length"></a> [password\_length](#input\_password\_length) | Random Password length. | `number` | `30` | no |
 | <a name="input_password_rotation"></a> [password\_rotation](#input\_password\_rotation) | Automatic password rotation in days on next terraform apply. | `number` | `1` | no |
 
