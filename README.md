@@ -56,15 +56,15 @@ See the [30-complex example](examples/30-complex) for customizing data & names f
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.3.2 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | 0.8.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3 |
+| <a name="requirement_time"></a> [time](#requirement\_time) | >= 0.8 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_random"></a> [random](#provider\_random) | 3.4.1 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.4.3 |
 | <a name="provider_time"></a> [time](#provider\_time) | 0.8.0 |
 
 ## Modules
@@ -78,7 +78,7 @@ No modules.
 | [random_string.customer_prefix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [random_string.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [random_string.random](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
-| [time_rotating.password](https://registry.terraform.io/providers/hashicorp/time/0.8.0/docs/resources/rotating) | resource |
+| [time_rotating.password](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/rotating) | resource |
 
 ## Inputs
 
