@@ -1,4 +1,4 @@
-cloud_region = "eu-central-1"
+cloud_region = "westeurope"
 global_config = {
   customer_prefix = "OTC" # Can also be an empty String "". Empty string results in a random prefix!
   env             = "TST"

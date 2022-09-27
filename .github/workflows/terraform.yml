@@ -56,17 +56,17 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.OTC_TEST_AWS_SECRET_ACCESS_KEY }}
           AUTO_CREATE_TF_BACKEND: 'false'
           PUBLISH_NAME: 'Results - AWS Example 10-simple'     
-      # 
-      # - id: azure_test
-      #   name: Test - Azure
-      #   uses: ./
-      #   with:
-      #     ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     CLOUD_REGION: 'westeurope'
-      #     AUTO_CREATE_TF_BACKEND: 'true'
-      #     ARM_CLIENT_ID: ${{ secrets.OTC_TEST_ARM_CLIENT_ID }}
-      #     ARM_CLIENT_SECRET: ${{ secrets.OTC_TEST_ARM_CLIENT_SECRET }}
-      #     ARM_TENANT_ID: ${{ secrets.OTC_TEST_ARM_TENANT_ID }}
-      #     ARM_SUBSCRIPTION_ID: ${{ secrets.OTC_TEST_ARM_SUBSCRIPTION_ID }}
-      #     PUBLISH_NAME: 'Results - Azure'      
+      
+      - id: azure_test
+        name: Test - Azure
+        uses: ./
+        with:
+          ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOUD_REGION: 'westeurope'
+          AUTO_CREATE_TF_BACKEND: 'false'
+          ARM_CLIENT_ID: ${{ secrets.OTC_TEST_ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.OTC_TEST_ARM_CLIENT_SECRET }}
+          ARM_TENANT_ID: ${{ secrets.OTC_TEST_ARM_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.OTC_TEST_ARM_SUBSCRIPTION_ID }}
+          PUBLISH_NAME: 'Azure 10-simple'      
