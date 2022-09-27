@@ -1,7 +1,10 @@
 # tfm-cloud-commons
 
 <!--.test-default-test-start-->
-
+[![OTC repo](https://img.shields.io/static/v1?logo=git&style=plastic&label=OTC%20repo&message=✓%206%20|✗%200%20|▲%203|➝%200&color=yellow)](https://github.com/Ontracon/tfm-cloud-commons/actions/runs/3133882868)
+[![TF Base](https://img.shields.io/static/v1?logo=terraform&style=plastic&label=TF%20Base&message=✓%203%20|✗%200%20|▲%200|➝%200&color=success)](https://github.com/Ontracon/tfm-cloud-commons/actions/runs/3133882868)
+[![TF Compliance (tflint)](https://img.shields.io/static/v1?logo=terraform&style=plastic&label=TF%20Compliance%20(tflint)&message=✓%201%20|✗%20%20|▲%201|➝%200&color=yellow)](https://github.com/Ontracon/tfm-cloud-commons/actions/runs/3133882868)
+[![Security (Checkov)](https://img.shields.io/static/v1?logo=terraform&style=plastic&label=Security%20(Checkov)&message=✓%2039%20|✗%200%20|▲%200|➝%200&color=success)](https://github.com/Ontracon/tfm-cloud-commons/actions/runs/3133882868)
 <!--.test-default-test-end-->
 
 Module for define central common variables and naming of ressources which are used within the OTC provided terraform modules. The commons module enables central changes for Data and Naming of ressources. Overrides of the data can bemade from outside without changing individual modules or the commons module.
