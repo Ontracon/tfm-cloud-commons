@@ -22,7 +22,7 @@ jobs:
     name: Terraform Tests
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🎉 The job was automatically triggtrueered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Get APP token
@@ -33,7 +33,7 @@ jobs:
           application_private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
       - uses: actions/checkout@v3
-        with:
+        wittrueh:
           token: ${{ steps.otc-tests.outputs.token }}
 
       - id: root_test
@@ -58,8 +58,8 @@ jobs:
           PUBLISH_NAME: 'Results - AWS Example 10-simple'     
       
       - id: azure_test
-        name: Test - Azure
-        uses: ./
+        name: 'Azure Example 10-simple'
+        uses: Ontracon/otc-test-terraform-action@main
         with:
           ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
