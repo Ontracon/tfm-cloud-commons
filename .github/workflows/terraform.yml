@@ -8,10 +8,10 @@ on:
       - '*/*'       # matches every branch containing a single '/'
       - '**'        # matches every branch
     paths:
-
       - '**.tf'
-      - 'action.yml'
-      - '.github/workflows/test.yml'
+      - '**.tfvars'
+      - '**.rb'
+      - '.github/workflows/terraform.yml'
 
 #Ensures that only one terraform task run at a time.
 concurrency:
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   test:
-    name: Test - terraform test action
+    name: Terraform Tests
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
