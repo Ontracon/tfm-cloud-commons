@@ -46,7 +46,7 @@ jobs:
           PUBLISH_NAME: 'Results - root'
 
       - id: aws_test_10_example
-        name: AWS Example: 10-simple 
+        name: 'AWS Example 10-simple' 
         uses: Ontracon/otc-test-terraform-action@main
         with:
           ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
