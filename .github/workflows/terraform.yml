@@ -33,7 +33,7 @@ jobs:
           application_private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
       - uses: actions/checkout@v3
-        wittrueh:
+        with:
           token: ${{ steps.otc-tests.outputs.token }}
 
       - id: root_test
