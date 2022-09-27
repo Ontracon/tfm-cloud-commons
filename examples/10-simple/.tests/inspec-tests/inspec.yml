@@ -1,0 +1,16 @@
+name: Inspec Test
+title: Commons Test Profile
+maintainer: OTC Team
+copyright: OTC Team
+copyright_email: DL-FG-242@list.bmw.com
+license: Apache-2.0
+summary: An Base InSpec Profile for testing Module commons
+version: 1.0.0
+inspec_version: '>= 4.7'
+supports:
+  - platform-family: linux
+inputs:
+  - name: CLOUD_REGION
+    description: Should contain the CLOUD_REGION
+    type: String
+    required: true
