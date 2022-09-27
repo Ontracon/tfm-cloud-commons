@@ -52,6 +52,8 @@ jobs:
           ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           CLOUD_REGION: 'eu-central-1'
+          AWS_ACCESS_KEY_ID: ${{ secrets.OTC_TEST_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.OTC_TEST_AWS_SECRET_ACCESS_KEY }}
           AUTO_CREATE_TF_BACKEND: 'false'
           PUBLISH_NAME: 'Results - AWS Example 10-simple'     
       # 
@@ -59,7 +61,7 @@ jobs:
       #   name: Test - Azure
       #   uses: ./
       #   with:
-      #     ROOT_DIR: '${{ github.workspace }}/tests/azure'
+      #     ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #     CLOUD_REGION: 'westeurope'
       #     AUTO_CREATE_TF_BACKEND: 'true'
