@@ -38,7 +38,7 @@ jobs:
 
       - id: root_test
         name: Test - Root Module
-        uses: ./
+        uses: Ontracon/otc-test-terraform-action@main
         with:
           ROOT_DIR: '${{ github.workspace }}/'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,7 +47,7 @@ jobs:
 
       - id: aws_test_10_example
         name: AWS Example: 10-simple 
-        uses: ./
+        uses: Ontracon/otc-test-terraform-action@main
         with:
           ROOT_DIR: '${{ github.workspace }}/examples/10-simple'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
