@@ -24,32 +24,11 @@ title "Check Local Outputs from commons module from deployment."
 desc "Check  Outputs"
   describe json(file) do  # This line reads outputs from terraform
       its(['locals','value','seperator']) { should eq '-' }
-      its(['locals','value','local','customer_prefix']) { should eq 'cgbp' }
+      its(['locals','value','local','customer_prefix']) { should eq 'otc' }
       its(['locals','value','local','env']) { should eq 'tst' }
       its(['locals','value','local','custom_name']) { should eq '' }
-      its(['locals','value','local','app_name']) { should eq 'simple' }
-      its(['locals','value','local','product_id']) { should eq 'swp-3397' }
-      its(['locals','value','local','application']) { should eq 'appd-304118' }
-      its(['locals','value','local','costcenter']) { should eq '1884' }
-  end
-end
-
-control 'Azure critical Names' do
-  impact 1.0
-title "Check Azure critical Names from output."
-desc "Check  Outputs"
-  describe json(file) do  # This line reads outputs from terraform
-    its(['names','value','resource_type','azurerm_storage_account','name']) { should match /^[a-z0-9]{,24}$/ }
-    its(['names','value','resource_type','azurerm_key_vault','name']) { should match /^[a-zA-Z0-9_-]{,24}$/ }
-  end
-end
-
-control 'AWS critical Names' do
-  impact 1.0
-title "Check AWS critical Names from output."
-desc "Check  Outputs"
-  describe json(file) do  # This line reads outputs from terraform
-    its(['names','value','resource_type','aws_lb','name']) { should match /^[a-zA-Z0-9_-]{,32}$/ }
-    its(['names','value','resource_type','aws_lb_target_group','name']) { should match /^[a-zA-Z0-9_-]{,32}/ }
+      its(['locals','value','local','project']) { should eq 'common' }
+      its(['locals','value','local','application']) { should eq '10-Simple' }
+      its(['locals','value','local','costcenter']) { should eq '0815' }
   end
 end
