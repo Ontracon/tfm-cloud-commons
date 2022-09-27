@@ -53,9 +53,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           CLOUD_REGION: 'eu-central-1'
           AUTO_CREATE_TF_BACKEND: 'true'
-          AWS_ACCESS_KEY_ID: ${{ secrets.OTC_TEST_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.OTC_TEST_AWS_SECRET_ACCESS_KEY }}
-          PUBLISH_NAME: 'Results - AWS Example 10-simple'      
+          PUBLISH_NAME: 'Results - AWS Example 10-simple'
+          AUTO_CREATE_TF_BACKEND: 'false'     
       # 
       # - id: azure_test
       #   name: Test - Azure
