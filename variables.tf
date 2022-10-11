@@ -33,6 +33,7 @@ variable "global_config" {
     project         = string
     application     = string
     costcenter      = string
+    customer = string
   })
   description = "Global config Object which contains the mandatory informations within OTC."
 
